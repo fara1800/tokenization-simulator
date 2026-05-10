@@ -216,23 +216,6 @@ st.title("🔤 Tokenization Simulator")
 st.subheader("Teknik Kompilasi — Lexical Analysis")
 st.markdown("Masukkan source code Python atau C/Arduino lalu klik **Tokenize** untuk melihat hasil analisis token.")
 
-col_ex1, col_ex2, col_ex3 = st.columns(3)
-with col_ex1:
-    if st.button("📌 Contoh C", use_container_width=True):
-        st.session_state.code_input = "int x = 5 + 3;\nfloat nilai = 1024.0;\nif (x > 0) {\n    return x;\n}"
-        st.session_state.show_result = False
-        st.experimental_rerun
-with col_ex2:
-    if st.button("📌 Contoh Python", use_container_width=True):
-        st.session_state.code_input = "x = 5 + 3\nnilai = 1024.0\nif x > 0:\n    print(x)\n# ini komentar"
-        st.session_state.show_result = False
-        st.experimental_rerun
-with col_ex3:
-    if st.button("📌 Contoh Arduino", use_container_width=True):
-        st.session_state.code_input = "int led = 13;\nvoid setup() {\n    pinMode(led, OUTPUT);\n}\nvoid loop() {\n    digitalWrite(led, HIGH);\n    delay(1000); // nyalakan LED\n    digitalWrite(led, LOW);\n    delay(1000);\n}"
-        st.session_state.show_result = False
-        st.experimental_rerun
-
 code_input = st.text_area(
     "Masukkan Source Code:",
     height=200,
